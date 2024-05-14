@@ -1,0 +1,73 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style></style>
+
+<main class="main container">
+  <div class="">
+    <div class="caption">
+      <h4>Thông tin sinh viên</h4>
+      <img width="200px" height="auto" src="assets/{{ student.anh }}" alt="" />
+    </div>
+    <ul>
+      <li><span>Họ và tên: </span>{{ student.hoten }}</li>
+      <li><span>Ngày sinh: </span>{{ student.ngaysinh }}</li>
+      <li><span>Giới tính: </span>{{ student.ngaysinh }}</li>
+      <li><span>Điểm trung bình: </span>{{ student.diemTB }}</li>
+    </ul>
+  </div>
+  <div>
+    <h2>Danh sách các nhà phát minh</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Year</th>
+          <th>Passed</th>
+        </tr>
+      </thead>
+      <tbody id="inventor">
+        {{
+          render(show)
+        }}>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <h2>Danh sách sản phẩm</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>productName</th>
+          <th>productCode</th>
+          <th>price</th>
+          <th>image</th>
+        </tr>
+      </thead>
+      <tbody id="products">
+        {{
+          renderProduct(showProduct)
+        }}>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet />
